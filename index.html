@@ -4,27 +4,759 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Jean Georjeas – Hello World</title>
-<meta content="Hello World" name="description"/>
+<title>Jean-Georges Restaurants | Fine Dining in NYC</title>
+<meta content="Jean-Georges offers exquisite fine dining with two Michelin stars. Enjoy seasonal French-American-Asian cuisine with stunning Central Park views at 1 Central Park West." name="description"/>
 <!-- Open Graph -->
-<meta content="Jean Georjeas – Hello World" property="og:title"/>
-<meta content="Hello World" property="og:description"/>
+<meta content="Jean-Georges Restaurants | Fine Dining in NYC" property="og:title"/>
+<meta content="Experience award-winning cuisine with stunning Central Park views. Two Michelin stars, four New York Times stars." property="og:description"/>
 <meta content="website" property="og:type"/>
+<meta content="https://www.jean-georgesrestaurant.com/content/slides/JGR.jpg" property="og:image"/>
+<meta content="https://kora-ebf390e3-5e67-4a98-ae4e-bb7a33a21a0c.pages.dev" property="og:url"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Jean-Georges Restaurants | Fine Dining in NYC" name="twitter:title"/>
+<meta content="Experience award-winning cuisine with stunning Central Park views. Two Michelin stars, four New York Times stars." name="twitter:description"/>
+<meta content="https://www.jean-georgesrestaurant.com/content/slides/JGR.jpg" name="twitter:image"/>
 <!-- Canonical -->
-<link href="https://staging.kora-ebf390e3-5e67-4a98-ae4e-bb7a33a21a0a.pages.dev" rel="canonical"/>
-<!-- JSON-LD Structured Data -->
+<link href="https://kora-ebf390e3-5e67-4a98-ae4e-bb7a33a21a0c.pages.dev" rel="canonical"/>
+<!-- LCP: first hero slide -->
+<link as="image" href="https://www.jean-georgesrestaurant.com/content/slides/jg-restaurant1.jpg" rel="preload"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Built Tailwind (no runtime CDN) — rebuild: npx tailwindcss@3.4.17 -i tw-input.css -o styles.css --minify -->
+<link href="styles.css" rel="stylesheet"/>
+<!-- Kora Voice Widget CSS -->
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
+<!-- reCAPTCHA -->
+<script async="" defer="" src="https://www.google.com/recaptcha/api.js"></script>
+<style>
+        .hero-slide {
+            transition: opacity 1s ease-in-out;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+    </style>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
+<script>
+window.KORA_CONFIG = window.KORA_CONFIG || {};
+window.KORA_CONFIG.apiBaseUrl = "https://kora-agent.quseappdev.com";
+window.KORA_CONFIG.features = window.KORA_CONFIG.features || {};
+window.KORA_CONFIG.features.voice = window.KORA_CONFIG.features.voice || {};
+window.KORA_CONFIG.features.voice.enabled = true;
+window.KORA_CONFIG.features.voice.provider = "xai";
+</script>
+</link>  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="font-sans text-gray-800 bg-cream antialiased">
+<!-- Navigation -->
+<nav class="fixed w-full z-50 bg-secondary/95 backdrop-blur-sm text-white transition-all duration-300" id="navbar">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex-shrink-0 flex items-center">
+<a class="font-serif text-2xl font-semibold tracking-wider" href="index.html">Jean-Georges</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm uppercase tracking-widest hover:text-accent transition" href="#about">About</a>
+<a class="text-sm uppercase tracking-widest hover:text-accent transition" href="#menu">Menu</a>
+<a class="text-sm uppercase tracking-widest hover:text-accent transition" href="#gallery">Gallery</a>
+<a class="text-sm uppercase tracking-widest hover:text-accent transition" href="#reviews">Reviews</a>
+<a class="text-sm uppercase tracking-widest hover:text-accent transition" href="#contact">Contact</a>
+<a class="bg-primary text-white px-6 py-2 text-sm uppercase tracking-widest hover:bg-accent transition" href="https://resy.com/cities/ny/jean-georges" rel="noopener noreferrer" target="_blank">Book
+                        a Table</a>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-white hover:text-accent" id="mobile-menu-btn">
+<i class="w-6 h-6" data-lucide="menu"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div class="hidden md:hidden bg-secondary border-t border-gray-700" id="mobile-menu">
+<div class="px-4 pt-2 pb-6 space-y-2">
+<a class="block px-3 py-2 text-base font-medium hover:text-accent" href="#about">About</a>
+<a class="block px-3 py-2 text-base font-medium hover:text-accent" href="#menu">Menu</a>
+<a class="block px-3 py-2 text-base font-medium hover:text-accent" href="#gallery">Gallery</a>
+<a class="block px-3 py-2 text-base font-medium hover:text-accent" href="#reviews">Reviews</a>
+<a class="block px-3 py-2 text-base font-medium hover:text-accent" href="#contact">Contact</a>
+<a class="block px-3 py-2 text-base font-medium text-primary" href="https://resy.com/cities/ny/jean-georges" rel="noopener noreferrer" target="_blank">Book a Table</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen w-full overflow-hidden">
+<div class="absolute inset-0" id="hero-carousel">
+<!-- Same slide assets as https://www.jean-georgesrestaurant.com/ homepage carousel -->
+<div class="hero-slide absolute inset-0 opacity-100">
+<img alt="Jean-Georges restaurant dining room" class="h-full w-full object-cover" decoding="async" fetchpriority="high" height="1080" loading="eager" src="https://www.jean-georgesrestaurant.com/content/slides/jg-restaurant1.jpg" width="1920"/>
+</div>
+<div class="hero-slide absolute inset-0 opacity-0">
+<img alt="Jean-Georges fine dining" class="h-full w-full object-cover" decoding="async" height="1080" loading="lazy" src="https://www.jean-georgesrestaurant.com/content/slides/JGR.jpg" width="1920"/>
+</div>
+<div class="hero-slide absolute inset-0 opacity-0">
+<img alt="Jean-Georges interior" class="h-full w-full object-cover" decoding="async" height="1080" loading="lazy" src="https://www.jean-georgesrestaurant.com/content/slides/jg-home23.jpg" width="1920"/>
+</div>
+<div class="hero-slide absolute inset-0 opacity-0">
+<img alt="Lunch at Jean-Georges" class="h-full w-full object-cover" decoding="async" height="1080" loading="lazy" src="https://www.jean-georgesrestaurant.com/content/slides/jg-lunch2.jpg" width="1920"/>
+</div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
+<div class="relative z-10 h-full flex items-center justify-center text-center px-4">
+<div class="max-w-4xl mx-auto text-white">
+<h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-semibold mb-6 tracking-wide">Jean-Georges
+                </h1>
+<p class="text-lg md:text-2xl font-light mb-4 tracking-wider uppercase">Exquisite fine dining with
+                    stunning views of Central Park</p>
+<p class="text-sm md:text-base mb-10 text-gray-200">Two Michelin Stars • Four New York Times Stars</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="bg-primary text-white px-8 py-4 text-sm uppercase tracking-widest hover:bg-accent transition duration-300" href="https://resy.com/cities/ny/jean-georges" rel="noopener noreferrer" target="_blank">Book
+                        a Table</a>
+<a class="border-2 border-white text-white px-8 py-4 text-sm uppercase tracking-widest hover:bg-white hover:text-secondary transition duration-300" href="https://nougatine.order.online/store/1019258?pickup=true&amp;redirected=true" rel="noopener noreferrer" target="_blank">Order
+                        Online</a>
+</div>
+</div>
+</div>
+<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+<i class="w-8 h-8" data-lucide="chevron-down"></i>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 bg-white" id="about">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<span class="text-primary text-sm uppercase tracking-widest font-semibold">Since 1997</span>
+<h2 class="font-serif text-4xl md:text-5xl text-secondary mt-4 mb-8">A Legacy of Culinary Excellence</h2>
+<p class="text-gray-600 text-lg leading-relaxed mb-6">
+                Jean-Georges opened in 1997 to critical acclaim. The jewel of Chef Jean-Georges Vongerichten's empire,
+                the restaurant offers the very best in fine dining. Awarded four stars by the New York Times and two
+                Michelin stars, Jean-Georges presents exquisitely crafted dishes blending French, American, and Asian
+                influences.
+            </p>
+<p class="text-gray-600 text-lg leading-relaxed mb-6">
+                The local farmer's market is the driving force behind the seasonal, ever-changing menu. Chef
+                Jean-Georges is a master at maintaining the essence of ingredients while using them inventively to
+                produce the best flavor.
+            </p>
+<p class="text-gray-600 text-lg leading-relaxed">
+                Jean-Georges' chic and intimate dining room was redesigned by Thomas Juul-Hansen, with striking lighting
+                by L'Observatoire. Impeccable service and floor-to-ceiling windows with stunning views of Central Park
+                and Columbus Circle all contribute to an unforgettable dining experience.
+            </p>
+</div>
+</section>
+<!-- Menu Section -->
+<section class="py-24 bg-secondary text-white" id="menu">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<span class="text-accent text-sm uppercase tracking-widest font-semibold">Seasonal Offerings</span>
+<h2 class="font-serif text-4xl md:text-5xl mt-4">Tasting Menus</h2>
+<p class="text-gray-400 mt-4 max-w-2xl mx-auto">Our menu changes with the seasons, featuring the finest
+                    ingredients from local farmers and purveyors.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Three Course -->
+<div class="bg-gray-800/50 p-8 border border-gray-700 hover:border-primary transition duration-300">
+<h3 class="font-serif text-2xl mb-2 text-accent">Three Course Lunch</h3>
+<p class="text-3xl font-serif mb-6">$128</p>
+<p class="text-gray-400 mb-6 text-sm">Choice of 3 Savory Dishes, Cheese or Dessert</p>
+<ul class="space-y-3 text-sm text-gray-300 mb-8">
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Amuse Bouche</li>
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Fennel - Sunflower dukkah,
+                            herbal oil</li>
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Yellowfin Tuna -
+                            Chrysanthemum, sunchoke labne</li>
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Hudson Valley Foie Gras
+                        </li>
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Wagyu Strip Loin</li>
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Warm Chocolate Cake</li>
+</ul>
+<a class="block text-center border border-primary text-primary py-3 uppercase text-xs tracking-widest hover:bg-primary hover:text-white transition" href="https://resy.com/cities/ny/jean-georges" rel="noopener noreferrer" target="_blank">Reserve
+                        for Lunch</a>
+</div>
+<!-- Six Course Lunch -->
+<div class="bg-gray-800/50 p-8 border border-primary relative">
+<div class="absolute top-0 right-0 bg-primary text-white text-xs px-3 py-1 uppercase tracking-wider">
+                        Popular</div>
+<h3 class="font-serif text-2xl mb-2 text-accent">Six Course Lunch</h3>
+<p class="text-3xl font-serif mb-6">$298</p>
+<p class="text-gray-400 mb-6 text-sm">An extended culinary journey through our finest offerings</p>
+<ul class="space-y-3 text-sm text-gray-300 mb-8">
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Amuse Bouche</li>
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Egg Toast with Caviar</li>
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Yellowfin Tuna</li>
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Hudson Valley Foie Gras
+                        </li>
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Black Sea Bass</li>
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Spiced Duck Breast</li>
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Mont Blanc Dessert</li>
+</ul>
+<a class="block text-center bg-primary text-white py-3 uppercase text-xs tracking-widest hover:bg-accent transition" href="https://resy.com/cities/ny/jean-georges" rel="noopener noreferrer" target="_blank">Reserve
+                        for Lunch</a>
+</div>
+<!-- Six Course Dinner -->
+<div class="bg-gray-800/50 p-8 border border-gray-700 hover:border-primary transition duration-300">
+<h3 class="font-serif text-2xl mb-2 text-accent">Six Course Dinner</h3>
+<p class="text-3xl font-serif mb-6">$298</p>
+<p class="text-gray-400 mb-6 text-sm">Omnivore Tasting Menu - Our signature experience</p>
+<ul class="space-y-3 text-sm text-gray-300 mb-8">
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Sea Urchin Amuse</li>
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Caviar with Scallops</li>
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Kanpachi - Curry leaf gelée
+                        </li>
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Morel Mushroom Ravioli</li>
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Black Sea Bass</li>
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Wagyu Strip Loin</li>
+<li class="flex items-start"><span class="text-primary mr-2">•</span>Dark Chocolate Dessert</li>
+</ul>
+<a class="block text-center border border-primary text-primary py-3 uppercase text-xs tracking-widest hover:bg-primary hover:text-white transition" href="https://resy.com/cities/ny/jean-georges" rel="noopener noreferrer" target="_blank">Reserve
+                        for Dinner</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Dishes -->
+<section class="py-24 bg-cream">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<span class="text-primary text-sm uppercase tracking-widest font-semibold">Signature Selections</span>
+<h2 class="font-serif text-4xl md:text-5xl text-secondary mt-4">Chef's Highlights</h2>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="group">
+<div class="overflow-hidden mb-4 aspect-square">
+<img alt="Three Course Tasting Menu" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" height="1080" loading="lazy" src="https://www.jean-georgesrestaurant.com/content/slides/20120709-jgr-132-1.jpg" width="1080"/>
+</div>
+<h3 class="font-serif text-xl text-secondary">Three Course Tasting</h3>
+<p class="text-gray-600 text-sm mt-2">Choice of 3 Savory Dishes, Cheese or Dessert</p>
+<p class="text-primary font-semibold mt-2">$128</p>
+</div>
+<div class="group">
+<div class="overflow-hidden mb-4 aspect-square">
+<img alt="Six Course Tasting Menu" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" height="1080" loading="lazy" src="https://www.jean-georgesrestaurant.com/content/slides/20120709-jgr-121-12.jpg" width="1080"/>
+</div>
+<h3 class="font-serif text-xl text-secondary">Six Course Journey</h3>
+<p class="text-gray-600 text-sm mt-2">A culinary journey through seasonal offerings</p>
+<p class="text-primary font-semibold mt-2">$298</p>
+</div>
+<div class="group">
+<div class="overflow-hidden mb-4 aspect-square">
+<img alt="Eggs Benedict" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" height="1080" loading="lazy" src="https://www.jean-georgesrestaurant.com/content/slides/eggs-benedict-with-chili-hollandaise-.jpg" width="1080"/>
+</div>
+<h3 class="font-serif text-xl text-secondary">Eggs Benedict</h3>
+<p class="text-gray-600 text-sm mt-2">With Smoked Salmon or Snake Rivers Farm Ham</p>
+<p class="text-primary font-semibold mt-2">$29</p>
+</div>
+<div class="group">
+<div class="overflow-hidden mb-4 aspect-square">
+<img alt="Wagyu Strip Loin" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" height="1080" loading="lazy" src="https://www.jean-georgesrestaurant.com/content/slides/20120709-jgr-121-1.jpg" width="1080"/>
+</div>
+<h3 class="font-serif text-xl text-secondary">Wagyu Strip Loin</h3>
+<p class="text-gray-600 text-sm mt-2">Creamed winter greens, maitake and horseradish</p>
+<p class="text-primary font-semibold mt-2">Tasting Menu</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-24 bg-white" id="gallery">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<span class="text-primary text-sm uppercase tracking-widest font-semibold">The Experience</span>
+<h2 class="font-serif text-4xl md:text-5xl text-secondary mt-4">Gallery</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+<div class="gallery-item relative aspect-square overflow-hidden cursor-pointer group">
+<img alt="Jean-Georges dining room" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" height="1080" loading="lazy" src="https://www.jean-georgesrestaurant.com/content/slides/jg-restaurant1.jpg" width="1080"/>
+<div class="gallery-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+<i class="text-white w-8 h-8" data-lucide="maximize-2"></i>
+</div>
+</div>
+<div class="gallery-item relative aspect-square overflow-hidden cursor-pointer group">
+<img alt="Private dining event" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" height="1080" loading="lazy" src="https://www.jean-georgesrestaurant.com/content/slides/jg-events3.jpg" width="1080"/>
+<div class="gallery-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+<i class="text-white w-8 h-8" data-lucide="maximize-2"></i>
+</div>
+</div>
+<div class="gallery-item relative aspect-square overflow-hidden cursor-pointer group">
+<img alt="Restaurant interior" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" height="1080" loading="lazy" src="https://www.jean-georgesrestaurant.com/content/slides/jg-home13.jpg" width="1080"/>
+<div class="gallery-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+<i class="text-white w-8 h-8" data-lucide="maximize-2"></i>
+</div>
+</div>
+<div class="gallery-item relative aspect-square overflow-hidden cursor-pointer group">
+<img alt="Outdoor terrace" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" height="1080" loading="lazy" src="https://www.jean-georgesrestaurant.com/content/slides/jg-terrace1.jpg" width="1080"/>
+<div class="gallery-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+<i class="text-white w-8 h-8" data-lucide="maximize-2"></i>
+</div>
+</div>
+<div class="gallery-item relative aspect-square overflow-hidden cursor-pointer group">
+<img alt="Nougatine dining area" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" height="1080" loading="lazy" src="https://www.jean-georgesrestaurant.com/content/slides/nougatine-0031.jpg" width="1080"/>
+<div class="gallery-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+<i class="text-white w-8 h-8" data-lucide="maximize-2"></i>
+</div>
+</div>
+<div class="gallery-item relative aspect-square overflow-hidden cursor-pointer group">
+<img alt="Fine dining presentation" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" height="1080" loading="lazy" src="https://www.jean-georgesrestaurant.com/content/slides/jg-gallery-0081.jpg" width="1080"/>
+<div class="gallery-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+<i class="text-white w-8 h-8" data-lucide="maximize-2"></i>
+</div>
+</div>
+<div class="gallery-item relative aspect-square overflow-hidden cursor-pointer group">
+<img alt="Events room" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" height="1080" loading="lazy" src="https://www.jean-georgesrestaurant.com/content/slides/nougatine-events-room1.jpg" width="1080"/>
+<div class="gallery-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+<i class="text-white w-8 h-8" data-lucide="maximize-2"></i>
+</div>
+</div>
+<div class="gallery-item relative aspect-square overflow-hidden cursor-pointer group">
+<img alt="Nougatine home" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" height="1080" loading="lazy" src="https://www.jean-georgesrestaurant.com/content/slides/nougatine-home1.jpg" width="1080"/>
+<div class="gallery-overlay absolute inset-0 bg-black/50 opacity-0 transition-opacity duration-300 flex items-center justify-center">
+<i class="text-white w-8 h-8" data-lucide="maximize-2"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="py-24 bg-secondary text-white" id="reviews">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<span class="text-accent text-sm uppercase tracking-widest font-semibold">Testimonials</span>
+<h2 class="font-serif text-4xl md:text-5xl mt-4">Guest Experiences</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-gray-800/50 p-8 border border-gray-700">
+<div class="flex text-accent mb-4">
+<i class="w-5 h-5 fill-current" data-lucide="star"></i>
+<i class="w-5 h-5 fill-current" data-lucide="star"></i>
+<i class="w-5 h-5 fill-current" data-lucide="star"></i>
+<i class="w-5 h-5 fill-current" data-lucide="star"></i>
+<i class="w-5 h-5 fill-current" data-lucide="star"></i>
+</div>
+<p class="text-gray-300 italic mb-6">"An absolutely unforgettable dining experience. Every dish was
+                        a work of art, and the views of Central Park were breathtaking. Impeccable service from start to
+                        finish."</p>
+<p class="text-sm font-semibold uppercase tracking-wider">— Alexandra Chen</p>
+</div>
+<div class="bg-gray-800/50 p-8 border border-gray-700">
+<div class="flex text-accent mb-4">
+<i class="w-5 h-5 fill-current" data-lucide="star"></i>
+<i class="w-5 h-5 fill-current" data-lucide="star"></i>
+<i class="w-5 h-5 fill-current" data-lucide="star"></i>
+<i class="w-5 h-5 fill-current" data-lucide="star"></i>
+<i class="w-5 h-5 fill-current" data-lucide="star"></i>
+</div>
+<p class="text-gray-300 italic mb-6">"Jean-Georges is the pinnacle of fine dining in NYC. The
+                        tasting menu was a journey of flavors, perfectly executed. Worth every penny for a special
+                        occasion."</p>
+<p class="text-sm font-semibold uppercase tracking-wider">— David Miller</p>
+</div>
+<div class="bg-gray-800/50 p-8 border border-gray-700">
+<div class="flex text-accent mb-4">
+<i class="w-5 h-5 fill-current" data-lucide="star"></i>
+<i class="w-5 h-5 fill-current" data-lucide="star"></i>
+<i class="w-5 h-5 fill-current" data-lucide="star"></i>
+<i class="w-5 h-5 fill-current" data-lucide="star"></i>
+<i class="w-5 h-5" data-lucide="star"></i>
+</div>
+<p class="text-gray-300 italic mb-6">"The ambiance is incredibly chic and romantic. While the price
+                        point is high, the quality of the ingredients and the creativity of the dishes justify it. The
+                        warm chocolate cake is a must-try!"</p>
+<p class="text-sm font-semibold uppercase tracking-wider">— Sophia Rodriguez</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 bg-cream" id="contact">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<span class="text-primary text-sm uppercase tracking-widest font-semibold">Get in Touch</span>
+<h2 class="font-serif text-4xl md:text-5xl text-secondary mt-4">Contact Us</h2>
+</div>
+<div class="grid lg:grid-cols-2 gap-12">
+<!-- Contact Info -->
+<div>
+<div class="bg-white p-8 shadow-lg mb-8">
+<h3 class="font-serif text-2xl text-secondary mb-6">Reservations &amp; Inquiries</h3>
+<div class="space-y-4">
+<div class="flex items-start">
+<i class="w-5 h-5 text-primary mt-1 mr-4 flex-shrink-0" data-lucide="map-pin"></i>
+<div>
+<p class="font-semibold text-secondary">Address</p>
+<p class="text-gray-600">1 Central Park West<br/>New York, NY 10023</p>
+</div>
+</div>
+<div class="flex items-start">
+<i class="w-5 h-5 text-primary mt-1 mr-4 flex-shrink-0" data-lucide="phone"></i>
+<div>
+<p class="font-semibold text-secondary">Phone</p>
+<a class="text-gray-600 hover:text-primary transition" href="tel:212-299-3900">212-299-3900</a>
+</div>
+</div>
+<div class="flex items-start">
+<i class="w-5 h-5 text-primary mt-1 mr-4 flex-shrink-0" data-lucide="mail"></i>
+<div>
+<p class="font-semibold text-secondary">Email</p>
+<a class="text-gray-600 hover:text-primary transition" href="mailto:info@jean-georges.com">info@jean-georges.com</a>
+</div>
+</div>
+<div class="flex items-start">
+<i class="w-5 h-5 text-primary mt-1 mr-4 flex-shrink-0" data-lucide="clock"></i>
+<div>
+<p class="font-semibold text-secondary">Hours</p>
+<p class="text-gray-600 text-sm">
+                                        Tuesday – Saturday<br/>
+                                        Lunch: 12:00 PM – 2:00 PM<br/>
+                                        Dinner: 4:45 PM – 9:30 PM<br/>
+<span class="text-primary">Closed Sunday &amp; Monday</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Map -->
+<div class="h-64 bg-gray-200">
+<iframe allowfullscreen="" height="100%" loading="lazy" src="https://maps.google.com/maps?q=1%20Central%20Park%20West,%20New%20York,%20NY%2010023&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="border:0;" width="100%"></iframe>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="bg-white p-8 shadow-lg">
+<h3 class="font-serif text-2xl text-secondary mb-6">Send us a Message</h3>
+<form class="space-y-6" id="contact-form">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2" for="contact-name">Full Name
+                                *</label>
+<input class="w-full px-4 py-3 border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition" id="contact-name" name="name" placeholder="Your name" required="" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2" for="contact-email">Email
+                                Address *</label>
+<input class="w-full px-4 py-3 border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition" id="contact-email" name="email" placeholder="your@email.com" required="" type="email"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-2" for="contact-message">Message
+                                *</label>
+<textarea class="w-full px-4 py-3 border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition" id="contact-message" name="message" placeholder="How can we help you?" required="" rows="4"></textarea>
+</div>
+<!-- reCAPTCHA -->
+<div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+<div class="text-red-500 text-sm hidden" id="contact-error"></div>
+<div class="text-green-600 text-sm hidden" id="contact-success"></div>
+<button class="w-full bg-secondary text-white py-4 uppercase tracking-widest text-sm hover:bg-primary transition duration-300" type="submit">Send
+                            Message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-secondary text-white py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-8 mb-12">
+<div class="col-span-2">
+<h3 class="font-serif text-2xl mb-4">Jean-Georges</h3>
+<p class="text-gray-400 mb-6 max-w-md">Award-winning fine dining with stunning Central Park views.
+                        Two Michelin stars, four New York Times stars.</p>
+<div class="flex space-x-4">
+<a class="text-gray-400 hover:text-accent transition" href="http://instagram.com/jean_georgesNYC/" rel="noopener noreferrer" target="_blank"><i class="w-5 h-5" data-lucide="instagram"></i></a>
+<a class="text-gray-400 hover:text-accent transition" href="http://www.facebook.com/JeanGeorgesRestaurant.NYC" rel="noopener noreferrer" target="_blank"><i class="w-5 h-5" data-lucide="facebook"></i></a>
+<a class="text-gray-400 hover:text-accent transition" href="https://twitter.com/Jean_GeorgesNYC" rel="noopener noreferrer" target="_blank"><i class="w-5 h-5" data-lucide="twitter"></i></a>
+</div>
+</div>
+<div>
+<h4 class="font-semibold uppercase tracking-widest text-sm mb-4 text-accent">Hours</h4>
+<ul class="space-y-2 text-gray-400 text-sm">
+<li>Mon: Closed</li>
+<li>Tue-Sat: 12PM-2PM, 4:45PM-9:30PM</li>
+<li>Sun: Closed</li>
+</ul>
+</div>
+<div>
+<h4 class="font-semibold uppercase tracking-widest text-sm mb-4 text-accent">Newsletter</h4>
+<form class="space-y-3" id="newsletter-form">
+<input class="w-full px-3 py-2 bg-gray-800 border border-gray-700 text-white text-sm focus:border-primary outline-none" id="newsletter-email" placeholder="Email" type="email"/>
+<input class="w-full px-3 py-2 bg-gray-800 border border-gray-700 text-white text-sm focus:border-primary outline-none" id="newsletter-phone" placeholder="Phone (optional)" type="tel"/>
+<label class="flex items-center gap-4 text-sm text-gray-400 py-2">
+<input class="w-5 h-5" id="newsletter-email-optin" type="checkbox"/>
+                            Email updates
+                        </label>
+<label class="flex items-center gap-4 text-sm text-gray-400 py-2">
+<input class="w-5 h-5" id="newsletter-sms-optin" type="checkbox"/>
+                            SMS updates
+                        </label>
+<p class="text-xs" id="newsletter-message"></p>
+<button class="w-full bg-primary text-white py-2 text-sm uppercase tracking-wider hover:bg-accent transition" type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-500 text-sm">© 2024 Jean-Georges Restaurants. All rights reserved.</p>
+<div class="flex space-x-6 mt-4 md:mt-0">
+<a class="text-gray-500 hover:text-white text-sm transition" href="#">Privacy Policy</a>
+<a class="text-gray-500 hover:text-white text-sm transition" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- JSON-LD (end of body is valid for Google) -->
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Jean Georjeas",
-    "description": "Hello World"
-  }
-  </script>
-<!-- Site stylesheet -->
-<link href="assets/styles.css" rel="stylesheet"/>
-<meta content="https://staging.kora-ebf390e3-5e67-4a98-ae4e-bb7a33a21a0a.pages.dev" property="og:url"/></head>
-<body class="min-h-screen flex items-center justify-center bg-white">
-<h1 class="text-4xl font-bold text-gray-900">Hello World</h1>
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Jean-Georges Restaurants",
+        "image": "https://www.jean-georgesrestaurant.com/content/slides/JGR.jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1 Central Park West",
+            "addressLocality": "New York",
+            "addressRegion": "NY",
+            "postalCode": "10023",
+            "addressCountry": "US"
+        },
+        "telephone": "212-299-3900",
+        "email": "info@jean-georges.com",
+        "url": "http://www.jean-georgesrestaurant.com/jean-georges/",
+        "priceRange": "$$$$",
+        "cuisine": ["French", "New American", "Asian Fusion"],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.2",
+            "reviewCount": "850"
+        },
+        "openingHours": [
+            "Tu 12:00-14:00,16:45-21:30",
+            "We 12:00-14:00,16:45-21:30",
+            "Th 12:00-14:00,16:45-21:30",
+            "Fr 12:00-14:00,16:45-21:30",
+            "Sa 12:00-14:00,16:45-21:30"
+        ],
+        "acceptsReservations": "True"
+    }
+    </script>
+<script>
+        window.KORA_SITE_CONFIG = {
+            apiBaseUrl: "https://api.kora.com",
+            businessId: "ebf390e3-5e67-4a98-ae4e-bb7a33a21a0c",
+            recaptchaSiteKey: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI",
+            features: {
+                voice: {
+                    enabled: true
+                }
+            }
+        };
+    </script>
+<!-- Kora Voice Widget -->
+<script src="assets/kora-voice/voice-client.js"></script>
+<script src="assets/kora-voice/voice-widget.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+        lucide.createIcons();
+
+        // Hero carousel (slides are real img elements for LCP)
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('#hero-carousel .hero-slide');
+        setInterval(() => {
+            slides[currentSlide].classList.remove('opacity-100');
+            slides[currentSlide].classList.add('opacity-0');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.remove('opacity-0');
+            slides[currentSlide].classList.add('opacity-100');
+        }, 5000);
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // Contact Form Handler
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('contact-name').value.trim();
+            const email = document.getElementById('contact-email').value.trim();
+            const message = document.getElementById('contact-message').value.trim();
+            const errorEl = document.getElementById('contact-error');
+            const successEl = document.getElementById('contact-success');
+
+            errorEl.classList.add('hidden');
+            successEl.classList.add('hidden');
+
+            // Validation
+            if (!name || !email || !message) {
+                errorEl.textContent = 'Please fill in all required fields.';
+                errorEl.classList.remove('hidden');
+                return;
+            }
+
+            if (!email.includes('@') || !email.includes('.')) {
+                errorEl.textContent = 'Please enter a valid email address.';
+                errorEl.classList.remove('hidden');
+                return;
+            }
+
+            // reCAPTCHA validation
+            const token = grecaptcha.getResponse();
+            if (!token) {
+                errorEl.textContent = 'Please complete the reCAPTCHA verification.';
+                errorEl.classList.remove('hidden');
+                return;
+            }
+
+            const cfg = window.KORA_SITE_CONFIG || {};
+            const apiBaseUrl = (cfg.apiBaseUrl || '').replace(/\/+$/, '');
+            const businessId = cfg.businessId;
+
+            if (!apiBaseUrl || !businessId) {
+                errorEl.textContent = 'Form temporarily unavailable. Please call us directly.';
+                errorEl.classList.remove('hidden');
+                return;
+            }
+
+            // Submit to Kora
+            fetch(apiBaseUrl + '/api/v1/public/forms/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    business_id: businessId,
+                    form_type: 'contact',
+                    form_data: { name, email, message },
+                    submitter_email: email,
+                    captcha_token: token
+                })
+            })
+                .then(r => {
+                    if (r.ok) return r.json();
+                    throw new Error('Submission failed');
+                })
+                .then(() => {
+                    successEl.textContent = 'Thank you for your message. We will be in touch shortly.';
+                    successEl.classList.remove('hidden');
+                    document.getElementById('contact-form').reset();
+                    grecaptcha.reset();
+                })
+                .catch(() => {
+                    errorEl.textContent = 'Something went wrong. Please try again or call us directly.';
+                    errorEl.classList.remove('hidden');
+                });
+        });
+
+        // Newsletter Form Handler
+        document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const cfg = window.KORA_SITE_CONFIG || {};
+            const apiBaseUrl = (cfg.apiBaseUrl || '').replace(/\/+$/, '');
+            const businessId = cfg.businessId;
+
+            const emailEl = document.getElementById('newsletter-email');
+            const phoneEl = document.getElementById('newsletter-phone');
+            const emailOpt = document.getElementById('newsletter-email-optin');
+            const smsOpt = document.getElementById('newsletter-sms-optin');
+            const msgEl = document.getElementById('newsletter-message');
+
+            const email = emailEl ? (emailEl.value || '').trim() : '';
+            const phone = phoneEl ? (phoneEl.value || '').trim() : '';
+            const emailOptIn = emailOpt ? emailOpt.checked : false;
+            const smsOptIn = smsOpt ? smsOpt.checked : false;
+
+            function showMsg(t, err) {
+                if (msgEl) {
+                    msgEl.textContent = t || '';
+                    msgEl.style.color = err ? '#f87171' : '#4ade80';
+                }
+            }
+
+            if (!email && !phone) {
+                showMsg('Please enter email or phone.', true);
+                return;
+            }
+            if (!emailOptIn && !smsOptIn) {
+                showMsg('Please select at least one: Email or SMS updates.', true);
+                return;
+            }
+            if (smsOptIn && !phone) {
+                showMsg('Please enter your phone for SMS updates.', true);
+                return;
+            }
+            if (emailOptIn && !email) {
+                showMsg('Please enter your email for email updates.', true);
+                return;
+            }
+            if (!apiBaseUrl || !businessId) {
+                showMsg('Subscription is not configured.', true);
+                return;
+            }
+
+            showMsg('Subscribing...', false);
+
+            fetch(apiBaseUrl + '/api/v1/public/newsletter/subscribe', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    business_id: businessId,
+                    email: email || null,
+                    phone_number: phone || null,
+                    email_opt_in: emailOptIn,
+                    sms_opt_in: smsOptIn,
+                    source: 'static_site_widget'
+                })
+            })
+                .then(function (r) {
+                    if (r.ok) return r.json();
+                    throw new Error('Request failed');
+                })
+                .then(function (data) {
+                    showMsg(data.message || 'Subscribed!', false);
+                    document.getElementById('newsletter-form').reset();
+                })
+                .catch(function () {
+                    showMsg('Something went wrong. Please try again.', true);
+                });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
