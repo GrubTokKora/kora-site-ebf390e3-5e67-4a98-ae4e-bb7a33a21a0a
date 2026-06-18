@@ -2,3 +2,11 @@
 @import "./_kora_tailwind_play_theme.css";
 @source "../**/*.html";
 @source "../assets/**/*.js";
+
+/* KORA_BRAND_THEME_START */
+@theme {
+  --color-primary: #0055FF;
+  --color-secondary: #F3F4F6;
+  --color-accent: #2A7FFF;
+}
+/* KORA_BRAND_THEME_END */
